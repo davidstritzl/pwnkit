@@ -1,6 +1,5 @@
 #!/bin/sh
 set -e
-[ "$UID" -eq 0 ] || exec sudo sh "$0" "$@"
 
 MY_PATH=$(dirname "$0")
 "$MY_PATH/pwnkit-ascii"
@@ -8,7 +7,7 @@ MY_PATH=$(dirname "$0")
 # Check for docker
 
 echo "Pulling latest pwnkit image . . ."
-sudo docker pull jasperboot/pwnkit:latest
+docker pull jasperboot/pwnkit:latest
 echo "Image pulled succesfully!"
 
 echo "Pulling latest version from GitHub . . ."

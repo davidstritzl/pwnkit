@@ -6,12 +6,13 @@ This tool is only tested for Linux and Mac, it might or might not work on Window
 
 ## Installation
 1. Make sure Docker is installed.
+1. Make sure that the current user is part of the `docker` group.
 1. Clone this repository.
 1. Optional: Add extracted location to path for easy execution.
 1. Run `./pwnkit` or `pwnkit`.
 
 ## Mounting a volume into pwnkit
-Change the file ./pwnkit-start from  
+Change the file ./pwnkit-start from
 ```docker run -i -t --rm -v /challenges/:/challenges/ jasperboot/pwnkit:latest```  
 to  
 ```docker run -i -t --rm -v [LOCAL FOLDER]:/challenges/ jasperboot/pwnkit:latest```
